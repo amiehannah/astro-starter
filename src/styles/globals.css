@@ -29,6 +29,18 @@
 		--chart-3: 197 37% 24%;
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
+		/* colour palette 1 */
+		--highlight-yellow: 33 89% 60%;
+		--white: 0 0% 100%;
+		--light-grey: 189 2% 89%;
+		--light-blue: 192 33% 72%;
+		--teal: 194 35% 39%;
+		--dark-navy: 209 67% 12%;
+
+		/* colour palette 2 */
+		--ice-blue: 202 51% 90%;
+		--mid-blue: 203 66% 82%;
+		--airforce-blue: 204 42% 42%;
 	}
 
 	.dark {
@@ -60,28 +72,22 @@
 }
 
 @layer base {
-	@font-face {
+	/* @font-face {
 		font-family: "Roboto";
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
 		src: url(/fonts/Roboto.ttf) format("ttf");
-	}
+	} */
 	@font-face {
-		font-family: "Roboto";
+		font-family: "Raleway", serif;
 		font-style: normal;
-		font-weight: 500;
+		font-weight: 300;
 		font-display: swap;
-		src: url(/fonts/Roboto-Medium.ttf) format("ttf");
-	}
-	@font-face {
-		font-family: "Roboto";
-		font-style: normal;
-		font-weight: 700;
+		line-height: 1;
 		font-display: swap;
-		src: url(/fonts/Roboto-Bold.ttf) format("ttf");
+		src: url(/fonts/Raleway-VariableFont_wght.ttf) format("ttf");
 	}
-
 	* {
 		@apply border-border;
 	}

@@ -1,0 +1,35 @@
+---
+interface Props {
+	buttonText: string;
+	// buttonColor: string;
+}
+
+const { buttonText } = Astro.props;
+---
+
+<!-- <div class="buttonWrapper"> -->
+<button class="buttonStyle">
+	{buttonText}
+</button>
+<!-- </div> -->
+
+<style>
+	/* .buttonWrapper {
+		display: flex;
+		justify-content: center;
+	} */
+
+	.buttonStyle {
+		/* margin: 20px 0px 0px; */
+		text-transform: uppercase;
+		background-color: rgb(255, 115, 85);
+		color: rgb(249, 238, 226);
+		/* padding: 0.8em 3.5em; */
+		padding: 8px 24px;
+		border-radius: 30px;
+		white-space: nowrap;
+		/* word-wrap: break-word; */
+		font-size: 12px;
+		letter-spacing: 0.08em;
+	}
+</style>

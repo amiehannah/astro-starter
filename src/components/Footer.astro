@@ -1,15 +1,58 @@
 ---
-
+const brandName = "Backyard Bores Pty Ltd. & Geotech Drilling Pty Ltd.";
+const address = "no. 1, placeholder address, Australia";
+const phone = "01234567890";
+const email = "placeholder@email.com";
+const links = ["About us", "Services", "Request a quote"];
 ---
 
 <footer>
-	<p>© 2021, Built with Astro</p>
+	<div class="footer_inner">
+		<div class="flex justify-center items-center box-border h-24 w-24 border-2">
+			LOGO
+		</div>
+		<p>CONTACT:</p>
+		<p>{address}</p>
+		<p>{phone}</p>
+		<p>{email}</p>
+		<div>
+			<ul>
+				{links.map((link) => <li>{link}</li>)}
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer_base">
+		<p>Copywright © 2024 {brandName}</p>
+		<p class="footer_mini">Designed & Developed by Amie</p>
+	</div>
 </footer>
 
 <style>
-	footer {
-		background-color: #f9f9f9;
-		padding: 1rem;
-		text-align: center;
+	.footer_inner {
+		background-color: #192d36;
+		padding: 4rem 1rem;
+		margin-top: 4rem;
+		color: #f4f5f5;
+		/* text-align: center; */
+	}
+	.footer_base {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 1rem;
+		margin: 0rem;
+		background-color: #0f2027;
+		border-top: 0.5px solid #f4f5f5;
+		color: #f4f5f5;
+		font-size: 0.8em;
+		letter-spacing: 1px;
+		font-weight: 200;
+		text-transform: uppercase;
+	}
+	.footer_mini {
+		padding-top: 1rem;
+		font-size: 0.7em;
+		text-transform: uppercase;
+		font-weight: 200;
 	}
 </style>

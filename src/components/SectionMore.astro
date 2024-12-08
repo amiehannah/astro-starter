@@ -1,0 +1,168 @@
+---
+import Button from "./Button.astro";
+import bodyOfWaterImage from "src/assets/bodyofwater.jpg";
+import pipeWaterImage from "src/assets/waterpouringoutpipe.jpg";
+import { Image } from "astro:assets";
+import CounterTile from "./CounterTile.astro";
+---
+
+<section class="section-more">
+	<div class="section-more-wrapper">
+		<div class="section-more-images">
+			<!-- this will be for the grid to house x2 images -->
+			<div class="image-wrapper-a">
+				<Image src={bodyOfWaterImage} alt="water" />
+			</div>
+			<div class="image-wrapper-b">
+				<Image src={pipeWaterImage} alt="water" />
+			</div>
+		</div>
+		<div class="section-more-content">
+			<!-- this will house the text content and a button -->
+			<h2 class="section-more-title">More about our work</h2>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
+				finibus ipsum. Sed eu commodo nisl, non interdum eros. Suspendisse ac
+				lobortis diam. Sed posuere urna id fermentum fermentum. Pellentesque
+				iaculis, dui quis euismod imperdiet, est nulla pharetra justo, eu
+				rhoncus lectus sapien eu velit. Integer orci nisi, luctus in.
+			</p>
+			<div class="buttonWrapper">
+				<Button buttonText="Find out more" />
+			</div>
+		</div>
+	</div>
+
+	<CounterTile />
+
+	<style>
+		/* media queries */
+		/* MOBILE */
+		/* @media screen and (max-width: 480px) { */
+		.section-more {
+			padding: 8rem 2rem 4rem 2rem;
+		}
+
+		.section-more-wrapper {
+			/* display: flex; */
+			flex-direction: column;
+		}
+
+		.section-more-images {
+			/* display: flex; */
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			width: 100%;
+			/* justify-content: center; */
+			border: 1px solid red;
+			/* padding: 2rem 0rem; */
+		}
+
+		.section-more-content {
+			width: 100%;
+			border: 1px solid red;
+			justify-content: flex-start;
+			padding: 1rem;
+		}
+
+		.image-wrapper-a {
+			/* height: 100%; */
+			display: flex;
+			max-width: 300px;
+			align-items: center;
+			/* width: 85%; */
+			padding-bottom: 1rem;
+			grid-column: 1/4;
+			grid-row: 1/3;
+		}
+		.image-wrapper-b {
+			grid-column: 2/5;
+			grid-row: 3/5;
+			max-width: 300px;
+			/* width: 85%; */
+			/* height: 100%; */
+		}
+		.buttonWrapper {
+			display: flex;
+			justify-content: center;
+			padding: 2rem 0rem 0rem 0rem;
+		}
+
+		.section-more-title {
+			font-size: 2rem;
+			text-transform: uppercase;
+			padding-bottom: 1rem;
+			margin-top: 1rem;
+		}
+		/* } */
+		/* TABLET */
+		@media screen and (max-width: 480px) {
+			.section-more-content {
+				/* width: 100%; */
+				border: 1px solid red;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 1rem;
+			}
+		}
+		/* DESKTOP */
+		/* @media screen and (min-width: 768px) {
+		.section-more {
+			padding: 4rem 4rem;
+		}
+
+		.section-more-top-wrapper {
+			display: flex;
+			width: 100%;
+		}
+
+		.section-more-images {
+			display: grid;
+			grid-template-columns: repeat(64, 2fr);
+			grid-template-rows: repeat(16, 2fr);
+			width: 40%;
+			border: 1px solid red;
+			padding: 2rem 0rem;
+		}
+		.section-more-title {
+			font-size: 2rem;
+			text-transform: uppercase;
+			padding-bottom: 1rem;
+			margin-top: 4rem;
+		}
+
+		.section-more-content {
+			width: 60%;
+			max-width: 200ch;
+			border: 1px solid red;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 4rem;
+		}
+		.section-more-numbers {
+			height: 150px;
+			border: 1px solid red;
+			display: flex;
+		}
+
+		.buttonWrapper {
+			display: flex;
+			padding: 2rem 0rem;
+		}
+		.image-wrapper-a {
+			height: 100%;
+			grid-column: 1/32;
+			grid-row: 1/12;
+		}
+		.image-wrapper-b {
+			height: 100%;
+			grid-column: 34/65;
+			grid-row: 6/32;
+		}
+	} */
+	</style>
+</section>

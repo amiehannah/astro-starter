@@ -63,9 +63,9 @@ export default {
 			},
 		},
 		fontFamily: {
-			sans: ["Roboto", ...defaultTheme.fontFamily.sans],
-			display: ["Roboto", "sans-serif"],
-			body: ["Roboto", "serif"],
+			sans: ["Raleway", ...defaultTheme.fontFamily.sans],
+			display: ["Raleway", "sans-serif"],
+			body: ["Raleway", "serif"],
 		},
 	},
 	plugins: [
