@@ -32,6 +32,7 @@
 		/* colour palette 1 */
 		--highlight-yellow: 33 89% 60%;
 		--white: 0 0% 100%;
+		--off-white: 0 0% 96%;
 		--light-grey: 189 2% 89%;
 		--light-blue: 192 33% 72%;
 		--teal: 194 35% 39%;
@@ -98,4 +99,82 @@
 
 main {
 	flex: 1;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1.2;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 2em;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
 }

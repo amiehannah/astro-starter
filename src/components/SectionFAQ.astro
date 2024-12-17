@@ -1,0 +1,150 @@
+---
+const faq = [
+	{
+		question: "Question 1",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
+	},
+	{
+		question: "Question 2",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
+	},
+	{
+		question: "Question 3",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
+	},
+	{
+		question: "Question 4",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
+	},
+	{
+		question: "Question 5",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
+	},
+];
+---
+<section class="section">
+<div class="title-wrapper">
+	<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="accordion-wrapper">
+	{faq.map((faq => (
+		<button class="accordion">{faq.question}<span class="icon" aria-hidden="true"></span></button>
+	<div class="panel">
+		<p>
+			{faq.content}
+		</p>
+
+	</div>
+)))}
+</div>
+</section>
+
+<style>
+	.title-wrapper {
+		display: flex;
+		justify-content: center;
+		padding: 4rem 0rem 0rem 0rem;
+	}
+	.accordion-wrapper {
+		padding: 2rem 2rem 4rem 2rem;
+	}
+
+	.accordion {
+		background-color: #eee;
+		color: #444;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+
+	.active,
+	.accordion:hover {
+		background-color: #ccc;
+	}
+
+	.panel {
+		padding: 1.5rem 18px;
+		display: none;
+		background-color: white;
+		overflow: hidden;
+	}
+
+	/* button section */
+
+ button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+}
+
+.icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background-color: black;
+	}
+
+.icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background-color: black;
+}
+
+.active .icon::after {
+	width: 0;
+}
+
+</style>
+
+<script>
+	const accordions = document.querySelectorAll<HTMLElement>(".accordion");
+
+	accordions.forEach((accordion) => {
+		accordion.addEventListener("click", () => {
+			accordion.classList.toggle("active");
+			const panel = accordion.nextElementSibling as HTMLElement | null;
+
+			if (panel) {
+				panel.style.display =
+					panel.style.display === "block" ? "none" : "block";
+			}
+		});
+	});
+</script>

@@ -6,6 +6,12 @@ import { Image } from "astro:assets";
 import src from "src/assets/bluewater.jpg";
 import SectionMore from "@/components/SectionMore.astro";
 import Footer from "@/components/Footer.astro";
+import SectionFAQ from "@/components/SectionFAQ.astro";
+import Banner from "@/components/Banner.astro";
+import SectionContact from "@/components/SectionContact.astro";
+import SectionServices from "@/components/SectionServices.astro";
+import SectionCustomerQuotes from "@/components/SectionCustomerQuotes.astro";
+import MapComponent from "@/components/MapComponent.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,12 +24,18 @@ import Footer from "@/components/Footer.astro";
 			</div>
 		</div>
 		<SectionMore />
-		<div class="flex justify-center mt-64">
+		<Banner />
+		<SectionServices />
+		<SectionCustomerQuotes />
+		<MapComponent />
+
+		<SectionFAQ />
+		<SectionContact />
+		<!-- <div class="flex justify-center mt-64">
 			<a class={`${buttonVariants({ variant: "default" })}`} href="/page2"
 				>Page 2</a
 			>
-		</div>
-		<Button buttonText="Our services" />
+		</div> -->
 		<Footer />
 	</main>
 </Layout>
@@ -41,12 +53,9 @@ import Footer from "@/components/Footer.astro";
 		line-height: 1.6; */
 	}
 	h1 {
-		font-size: 2.5rem;
 		font-weight: 200;
-		line-height: 1.2;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
 	}
+
 	/* media queries */
 	@media screen and (min-width: 450px) {
 		h1 {

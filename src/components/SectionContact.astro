@@ -1,0 +1,48 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="section-contact">
+	<h3>Get in touch</h3>
+	<div class="logo"></div>
+
+	<div class="address">
+		<p>36 Wellington St,</p>
+		<p>Mackay QLD 4740,</p>
+		<p>Australia</p>
+	</div>
+	<div>
+		<Button buttonText="Call to Action" />
+	</div>
+</section>
+
+<style>
+	.section-contact {
+		min-height: 450px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		background-color: hsl(var(--light-blue));
+		padding: 4rem 0rem;
+	}
+
+	.logo {
+		height: 20px;
+		width: 30%;
+		background-color: hsl(var(--dark-navy));
+		margin: 0.5rem;
+	}
+
+	.address {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+	}
+
+	.address > p {
+		padding: 0.25rem;
+	}
+</style>

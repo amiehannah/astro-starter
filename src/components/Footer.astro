@@ -7,7 +7,7 @@ const links = ["About us", "Services", "Request a quote"];
 ---
 
 <footer>
-	<div class="footer_inner">
+	<!-- <div class="footer_inner">
 		<div class="flex justify-center items-center box-border h-24 w-24 border-2">
 			LOGO
 		</div>
@@ -20,7 +20,7 @@ const links = ["About us", "Services", "Request a quote"];
 				{links.map((link) => <li>{link}</li>)}
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="footer_base">
 		<p>Copywright © 2024 {brandName}</p>
@@ -29,24 +29,17 @@ const links = ["About us", "Services", "Request a quote"];
 </footer>
 
 <style>
-	.footer_inner {
-		background-color: #192d36;
-		padding: 4rem 1rem;
-		margin-top: 4rem;
-		color: #f4f5f5;
-		/* text-align: center; */
-	}
 	.footer_base {
 		display: flex;
 		flex-direction: column;
 		padding: 2rem 1rem;
 		margin: 0rem;
-		background-color: #0f2027;
-		border-top: 0.5px solid #f4f5f5;
-		color: #f4f5f5;
+		background-color: hsl(var(--dark-navy));
+		border-top: 0.5px solid hsl(var(--off-white));
+		color: hsl(var(--off-white));
 		font-size: 0.8em;
 		letter-spacing: 1px;
-		font-weight: 200;
+		font-weight: 400;
 		text-transform: uppercase;
 	}
 	.footer_mini {
