@@ -24,6 +24,12 @@ import Button from "./Button.astro";
 	</div>
 </header>
 
+<style is:global>
+	body:has(.burger-button.active) {
+		overflow: clip;
+	}
+</style>
+
 <style>
 	header {
 		position: relative;
