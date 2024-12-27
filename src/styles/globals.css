@@ -70,9 +70,7 @@
 		--chart-4: 280 65% 60%;
 		--chart-5: 340 75% 55%;
 	}
-}
 
-@layer base {
 	/* @font-face {
 		font-family: "Roboto";
 		font-style: normal;
@@ -83,98 +81,90 @@
 	@font-face {
 		font-family: "Raleway", serif;
 		font-style: normal;
-		font-weight: 300;
-		font-display: swap;
-		line-height: 1;
+		font-weight: 300 900;
 		font-display: swap;
 		src: url(/fonts/Raleway-VariableFont_wght.ttf) format("ttf");
 	}
+
+	main {
+		flex: 1;
+	}
+
+	h1 {
+		font-size: 3em;
+		line-height: 1.2;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 2em;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	h3 {
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
+	/* 1. Use a more-intuitive box-sizing model */
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	/* 2. Remove default margin */
 	* {
-		@apply border-border;
+		margin: 0;
 	}
+
 	body {
-		@apply bg-background text-foreground;
+		/* 3. Add accessible line-height */
+		line-height: 1.5;
+		/* 4. Improve text rendering */
+		-webkit-font-smoothing: antialiased;
 	}
-}
 
-main {
-	flex: 1;
-}
+	/* 5. Improve media defaults */
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
 
-h1 {
-	font-size: 3em;
-	line-height: 1.2;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
-}
-h2 {
-	font-size: 2em;
-	text-transform: uppercase;
-	font-weight: 300;
-}
+	/* 6. Inherit fonts for form controls */
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
 
-h3 {
-	font-size: 1em;
-	text-transform: uppercase;
-}
+	/* 7. Avoid text overflows */
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
 
-/* 1. Use a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-	margin: 0;
-}
-
-body {
-	/* 3. Add accessible line-height */
-	line-height: 1.5;
-	/* 4. Improve text rendering */
-	-webkit-font-smoothing: antialiased;
-}
-
-/* 5. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-
-/* 6. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-/* 7. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
-
-/* 8. Improve line wrapping */
-p {
-	text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-wrap: balance;
+	/* 8. Improve line wrapping */
+	p {
+		text-wrap: pretty;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
 }
