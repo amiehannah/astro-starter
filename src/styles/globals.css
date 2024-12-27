@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base, theme;
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -86,25 +88,12 @@
 		src: url(/fonts/Raleway-VariableFont_wght.ttf) format("ttf");
 	}
 
+	html {
+		interpolate-size: allow-keywords;
+	}
+
 	main {
 		flex: 1;
-	}
-
-	h1 {
-		font-size: 3em;
-		line-height: 1.2;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
-	}
-	h2 {
-		font-size: 2em;
-		text-transform: uppercase;
-		font-weight: 300;
-	}
-
-	h3 {
-		font-size: 1em;
-		text-transform: uppercase;
 	}
 
 	/* 1. Use a more-intuitive box-sizing model */
@@ -166,5 +155,32 @@
 	h5,
 	h6 {
 		text-wrap: balance;
+	}
+}
+
+.btn-accent {
+	/* margin: 20px 0px 0px; */
+	text-transform: uppercase;
+	/* background-color: rgb(255, 115, 85); */
+	background-color: hsl(var(--highlight-yellow));
+	color: rgb(249, 238, 226);
+	/* padding: 0.8em 3.5em; */
+	padding: 8px 24px;
+
+	border: none;
+	border-radius: 30px;
+	white-space: nowrap;
+	/* word-wrap: break-word; */
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+
+	&:hover,
+	&:focus-visible {
+		color: white;
+		background-color: oklch(
+			from hsl(var(--highlight-yellow)) calc(l - 0.05) c h
+		);
+		box-shadow: 0 0 5px 0
+			oklch(from hsl(var(--highlight-yellow)) calc(l - 0.075) c h);
 	}
 }
