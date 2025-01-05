@@ -21,13 +21,13 @@ const faq = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
 	},
 	{
-		question: "Question 5",
+		question: "Question 5 that has really long content what will it look like?",
 		content:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat.",
 	},
 ];
 ---
-<section class="section">
+<section class="section-faq">
 <div class="title-wrapper">
 	<h2>Frequently Asked Questions</h2>
 </div>
@@ -46,20 +46,23 @@ const faq = [
 </section>
 
 <style>
+	.section-faq {
+		padding: 4rem 6rem 6rem 6rem;
+	}
 	.title-wrapper {
 		display: flex;
 		justify-content: center;
-		padding: 4rem 0rem 0rem 0rem;
+		padding: 0rem 0rem 2rem 0rem;
 	}
-	.accordion-wrapper {
-		padding: 2rem 2rem 4rem 2rem;
-	}
+	/* .accordion-wrapper {
+		padding: 4rem 6rem 8rem 6rem;
+	} */
 
 	.accordion {
 		background-color: #eee;
 		color: #444;
 		cursor: pointer;
-		padding: 18px;
+		padding: 20px 44px 20px 20px;
 		width: 100%;
 		border: none;
 		text-align: left;
@@ -129,6 +132,21 @@ const faq = [
 
 .active .icon::after {
 	width: 0;
+}
+h2 {
+		text-align: center;
+	}
+
+/* media queries */
+@media screen and (max-width: 720px) { 
+	.section-faq {
+		padding: 4rem;
+	}
+}
+@media screen and (max-width: 480px) { 
+	.section-faq {
+		padding: 4rem 2rem 4rem 2rem;
+	}
 }
 
 </style>

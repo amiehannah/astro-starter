@@ -1,36 +1,37 @@
 ---
 interface Props {
 	buttonText: string;
-	// buttonColor: string;
 }
 
 const { buttonText } = Astro.props;
 ---
 
 <!-- <div class="buttonWrapper"> -->
-<button class="buttonStyle">
-	{buttonText}
+<button class="button-style">
+	{buttonText}<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		><path
+			fill="currentColor"
+			d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z"
+		></path></svg
+	>
 </button>
-<!-- </div> -->
 
 <style>
-	/* .buttonWrapper {
-		display: flex;
-		justify-content: center;
-	} */
-
-	.buttonStyle {
-		/* margin: 20px 0px 0px; */
+	.button-style {
 		text-transform: uppercase;
-		/* background-color: rgb(255, 115, 85); */
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background-color: hsl(var(--highlight-yellow) / 0.95);
-		color: rgb(249, 238, 226);
-		/* padding: 0.8em 3.5em; */
-		padding: 8px 24px;
+		padding: 8px 20px 8px 26px;
 		border-radius: 30px;
 		white-space: nowrap;
-		/* word-wrap: break-word; */
-		font-size: 12px;
-		letter-spacing: 0.08em;
+		font-size: 14px;
+		letter-spacing: 0.04em;
+		font-weight: 500;
 	}
 </style>

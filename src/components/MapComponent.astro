@@ -1,1 +1,25 @@
-<div>a map may go here</div>
+<div class="section-map">a map may go here</div>
+
+<style>
+	.section-map {
+		padding: 4rem 6rem 8rem 6rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 500px;
+		background-color: hsl(var(--teal));
+		color: hsl(var(--off-white));
+		margin: 4rem 6rem 0rem 6rem;
+	}
+
+	@media screen and (max-width: 720px) {
+		.section-map {
+			margin: 4rem;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.section-map {
+			margin: 4rem 2rem 4rem 2rem;
+		}
+	}
+</style>

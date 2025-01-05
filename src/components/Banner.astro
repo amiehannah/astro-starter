@@ -1,6 +1,24 @@
+---
+import pipeWaterImage from "src/assets/waterpouringoutpipe.jpg";
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+---
+
 <section class="section-banner">
-	<div class="banner-image"></div>
-	<div class="banner-content"></div>
+	<div class="banner-image">
+		<Image class="pipe-image" src={pipeWaterImage} alt="water" />
+	</div>
+	<div class="banner-content">
+		<div>
+			<h4 class="banner-statement">
+				Your water bore and geotech drilling specialists since 2002. Covering
+				the Mackay region from Bowen to Rockhampton and west to Clermont.
+			</h4>
+			<div class="button-wrapper">
+				<Button buttonText="Get a quote" />
+			</div>
+		</div>
+	</div>
 </section>
 
 <style>
@@ -9,13 +27,31 @@
 		margin: 4rem 0rem;
 	}
 	.banner-image {
-		width: 40%;
-		height: 450px;
 		background-color: hsl(var(--light-blue));
+		height: 500px;
+		width: 40%;
 	}
 	.banner-content {
+		padding: 4rem;
 		width: 60%;
-		height: 450px;
+		height: 500px;
 		background: hsl(var(--teal));
+		text-transform: uppercase;
+		font-size: 1.8em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.pipe-image {
+		/* border-radius: 16px; */
+		/* height: 450px; */
+		height: 100%;
+		object-fit: cover;
+		/* object-fit: contain; */
+	}
+
+	.button-wrapper {
+		padding: 2rem 0rem;
 	}
 </style>

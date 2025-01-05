@@ -41,7 +41,7 @@ import CounterTile from "./CounterTile.astro";
 		/* MOBILE */
 		/* @media screen and (max-width: 480px) { */
 		.section-more {
-			padding: 8rem 2rem 4rem 2rem;
+			padding: 4rem 6rem 6rem 6rem;
 		}
 
 		.section-more-wrapper {
@@ -98,6 +98,12 @@ import CounterTile from "./CounterTile.astro";
 		}
 		/* } */
 		/* TABLET */
+
+		@media screen and (max-width: 720px) {
+			.section-more {
+				padding: 4rem;
+			}
+		}
 		@media screen and (max-width: 480px) {
 			.section-more-content {
 				/* width: 100%; */
@@ -106,6 +112,10 @@ import CounterTile from "./CounterTile.astro";
 				flex-direction: column;
 				justify-content: center;
 				padding: 1rem;
+			}
+
+			.section-more {
+				padding: 2rem;
 			}
 		}
 		/* DESKTOP */
