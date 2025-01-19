@@ -73,14 +73,15 @@
 }
 
 @layer base {
-	/* @font-face {
-		font-family: "Roboto";
+	@font-face {
+		font-family: "Questrial", serif;
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url(/fonts/Roboto.ttf) format("ttf");
-	} */
-	@font-face {
+		line-height: 1;
+		src: url(/fonts/Questrial) format("ttf");
+	}
+	/* @font-face {
 		font-family: "Raleway", serif;
 		font-style: normal;
 		font-weight: 300;
@@ -88,7 +89,7 @@
 		line-height: 1;
 		font-display: swap;
 		src: url(/fonts/Raleway-VariableFont_wght.ttf) format("ttf");
-	}
+	} */
 	* {
 		@apply border-border;
 	}

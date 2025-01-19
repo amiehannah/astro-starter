@@ -63,9 +63,9 @@ export default {
 			},
 		},
 		fontFamily: {
-			sans: ["Raleway", ...defaultTheme.fontFamily.sans],
-			display: ["Raleway", "sans-serif"],
-			body: ["Raleway", "serif"],
+			sans: ["Questrial", ...defaultTheme.fontFamily.sans],
+			display: ["Questrial", "sans-serif"],
+			body: ["Questrial", "serif"],
 		},
 	},
 	plugins: [
